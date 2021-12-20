@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Atrium Demo</title>
+  <style type="text/css">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+  </style>
+  <script type="text/javascript" src="https://atrium.mx.com/connect.js"></script>
+</head>
+
+<body>
+  <input id="connecturl" type="text" />
+  <button id="openConnect">Open Connect</button>
+  <button id="closeConnect">Close Connect</button>
+  <div id="widget"></div>
+
+  <script type="text/javascript">
+    var openButton = document.getElementById('openConnect')
+    var closeButton = document.getElementById('closeConnect')
+    var mxConnect = new window.MXConnect({
+      id: "widget",
+      iframeTitle: 'Connect',      
+      onEvent: function (type, payload) {
+        console.log("onEvent", type, payload);
+      },
+      onLoad: function (event) {
+        console.log("onLoad", event);
+      },
+      onSuccess: function (event) {
+        console.log("onSuccess", event);
+      },
+      targetOrigin: "*",
+    })    
+    openButton.addEventListener('click', function() {
+      var connectURLInput = document.getElementById('connecturl')
+      var connectURL = connectURLInput.value
+
+      mxConnect.load(connectURL);
+
+      connectURLInput.value = ''
+    })
+
+    closeButton.addEventListener('click', function() {
+      var connectIFrame = document.querySelector('iframe[title="Connect"]')
+
+      connectIFrame.remove()
+    })    
+    window.addEventListener('message', function (event) {
+      try {        
+        const data = JSON.parse(event.data);
+
+        if (data.moneyDesktop) {
+          console.log('versions null -> 3', data);
+        }
+      } catch (error) {        
+        if (event.data.mx) {
+          console.log('version 4 message', event.data);
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
