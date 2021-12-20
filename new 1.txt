@@ -1,0 +1,269 @@
+public interface IMxPlatformApiAsync
+    {
+        #region Asynchronous Operations
+        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> CheckBalancesAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> CheckBalancesWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryResponseBody> CreateCategoryAsync(string userGuid, CategoryCreateRequestBody categoryCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> CreateCategoryWithHttpInfoAsync(string userGuid, CategoryCreateRequestBody categoryCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> CreateManagedAccountAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> CreateManagedAccountWithHttpInfoAsync(string userGuid, string memberGuid, ManagedAccountCreateRequestBody managedAccountCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> CreateManagedMemberAsync(string userGuid, ManagedMemberCreateRequestBody managedMemberCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> CreateManagedMemberWithHttpInfoAsync(string userGuid, ManagedMemberCreateRequestBody managedMemberCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> CreateManagedTransactionAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> CreateManagedTransactionWithHttpInfoAsync(string userGuid, string memberGuid, ManagedTransactionCreateRequestBody managedTransactionCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> CreateMemberAsync(string userGuid, MemberCreateRequestBody memberCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> CreateMemberWithHttpInfoAsync(string userGuid, MemberCreateRequestBody memberCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TagResponseBody> CreateTagAsync(string userGuid, TagCreateRequestBody tagCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TagResponseBody>> CreateTagWithHttpInfoAsync(string userGuid, TagCreateRequestBody tagCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaggingResponseBody> CreateTaggingAsync(string userGuid, TaggingCreateRequestBody taggingCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TaggingResponseBody>> CreateTaggingWithHttpInfoAsync(string userGuid, TaggingCreateRequestBody taggingCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionRuleResponseBody> CreateTransactionRuleAsync(string userGuid, TransactionRuleCreateRequestBody transactionRuleCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionRuleResponseBody>> CreateTransactionRuleWithHttpInfoAsync(string userGuid, TransactionRuleCreateRequestBody transactionRuleCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserResponseBody> CreateUserAsync(UserCreateRequestBody userCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> CreateUserWithHttpInfoAsync(UserCreateRequestBody userCreateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteCategoryAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteManagedMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTagAsync(string tagGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTagWithHttpInfoAsync(string tagGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTaggingAsync(string taggingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTaggingWithHttpInfoAsync(string taggingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteTransactionRuleAsync(string transactionRuleGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTransactionRuleWithHttpInfoAsync(string transactionRuleGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task DeleteUserAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserWithHttpInfoAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<System.IO.Stream> DownloadStatementPDFAsync(string memberGuid, string statementGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> DownloadStatementPDFWithHttpInfoAsync(string memberGuid, string statementGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<EnhanceTransactionsResponseBody> EnhanceTransactionsAsync(EnhanceTransactionsRequestBody enhanceTransactionsRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<EnhanceTransactionsResponseBody>> EnhanceTransactionsWithHttpInfoAsync(EnhanceTransactionsRequestBody enhanceTransactionsRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> ExtendHistoryAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ExtendHistoryWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> FetchStatementsAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> FetchStatementsWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> IdentifyMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> IdentifyMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountNumbersResponseBody> ListAccountNumbersByAccountAsync(string accountGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountNumbersResponseBody>> ListAccountNumbersByAccountWithHttpInfoAsync(string accountGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountNumbersResponseBody> ListAccountNumbersByMemberAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountNumbersResponseBody>> ListAccountNumbersByMemberWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountOwnersResponseBody> ListAccountOwnersByMemberAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountOwnersResponseBody>> ListAccountOwnersByMemberWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoriesResponseBody> ListCategoriesAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoriesResponseBody>> ListCategoriesWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoriesResponseBody> ListDefaultCategoriesAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoriesResponseBody>> ListDefaultCategoriesWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoriesResponseBody> ListDefaultCategoriesByUserAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoriesResponseBody>> ListDefaultCategoriesByUserWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InstitutionsResponseBody> ListFavoriteInstitutionsAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListFavoriteInstitutionsWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsAsync(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsWithHttpInfoAsync(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByMemberAsync(string memberGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByMemberWithHttpInfoAsync(string memberGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CredentialsResponseBody> ListInstitutionCredentialsAsync(string institutionCode, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CredentialsResponseBody>> ListInstitutionCredentialsWithHttpInfoAsync(string institutionCode, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync(string name = default(string), int? page = default(int?), int? recordsPerPage = default(int?), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsTransactionHistory = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsWithHttpInfoAsync(string name = default(string), int? page = default(int?), int? recordsPerPage = default(int?), bool? supportsAccountIdentification = default(bool?), bool? supportsAccountStatement = default(bool?), bool? supportsAccountVerification = default(bool?), bool? supportsTransactionHistory = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountsResponseBody> ListManagedAccountsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListManagedAccountsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InstitutionsResponseBody> ListManagedInstitutionsAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListManagedInstitutionsWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MembersResponseBody> ListManagedMembersAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MembersResponseBody>> ListManagedMembersWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListManagedTransactionsAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListManagedTransactionsWithHttpInfoAsync(string userGuid, string memberGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ChallengesResponseBody> ListMemberChallengesAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<ChallengesResponseBody>> ListMemberChallengesWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CredentialsResponseBody> ListMemberCredentialsAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CredentialsResponseBody>> ListMemberCredentialsWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MembersResponseBody> ListMembersAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MembersResponseBody>> ListMembersWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MerchantsResponseBody> ListMerchantsAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<StatementsResponseBody> ListStatementsByMemberAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<StatementsResponseBody>> ListStatementsByMemberWithHttpInfoAsync(string memberGuid, string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaggingsResponseBody> ListTaggingsAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TaggingsResponseBody>> ListTaggingsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TagsResponseBody> ListTagsAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TagsResponseBody>> ListTagsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionRulesResponseBody> ListTransactionRulesAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionRulesResponseBody>> ListTransactionRulesWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListTransactionsAsync(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListTransactionsWithHttpInfoAsync(string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListTransactionsByAccountAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListTransactionsByAccountWithHttpInfoAsync(string accountGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListTransactionsByMemberAsync(string memberGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListTransactionsByMemberWithHttpInfoAsync(string memberGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListTransactionsByTagAsync(string tagGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListTransactionsByTagWithHttpInfoAsync(string tagGuid, string userGuid, string fromDate = default(string), int? page = default(int?), int? recordsPerPage = default(int?), string toDate = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountsResponseBody> ListUserAccountsAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountsResponseBody>> ListUserAccountsWithHttpInfoAsync(string userGuid, int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<UsersResponseBody>> ListUsersWithHttpInfoAsync(int? page = default(int?), int? recordsPerPage = default(int?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> ReadAccountAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadAccountWithHttpInfoAsync(string accountGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryResponseBody> ReadCategoryAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> ReadCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryResponseBody> ReadDefaultCategoryAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> ReadDefaultCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<HoldingResponseBody> ReadHoldingAsync(string holdingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<HoldingResponseBody>> ReadHoldingWithHttpInfoAsync(string holdingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<InstitutionResponseBody> ReadInstitutionAsync(string institutionCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<InstitutionResponseBody>> ReadInstitutionWithHttpInfoAsync(string institutionCode, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> ReadManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> ReadManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> ReadManagedMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ReadManagedMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> ReadManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> ReadMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ReadMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberStatusResponseBody> ReadMemberStatusAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberStatusResponseBody>> ReadMemberStatusWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MerchantResponseBody> ReadMerchantAsync(string merchantGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MerchantResponseBody>> ReadMerchantWithHttpInfoAsync(string merchantGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MerchantLocationResponseBody> ReadMerchantLocationAsync(string merchantLocationGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MerchantLocationResponseBody>> ReadMerchantLocationWithHttpInfoAsync(string merchantLocationGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<StatementResponseBody> ReadStatementByMemberAsync(string memberGuid, string statementGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<StatementResponseBody>> ReadStatementByMemberWithHttpInfoAsync(string memberGuid, string statementGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TagResponseBody> ReadTagAsync(string tagGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TagResponseBody>> ReadTagWithHttpInfoAsync(string tagGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaggingResponseBody> ReadTaggingAsync(string taggingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TaggingResponseBody>> ReadTaggingWithHttpInfoAsync(string taggingGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> ReadTransactionAsync(string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadTransactionWithHttpInfoAsync(string transactionGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionRuleResponseBody> ReadTransactionRuleAsync(string transactionRuleGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionRuleResponseBody>> ReadTransactionRuleWithHttpInfoAsync(string transactionRuleGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserResponseBody> ReadUserAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> ReadUserWithHttpInfoAsync(string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ConnectWidgetResponseBody> RequestConnectWidgetURLAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<ConnectWidgetResponseBody>> RequestConnectWidgetURLWithHttpInfoAsync(string userGuid, ConnectWidgetRequestBody connectWidgetRequestBody = default(ConnectWidgetRequestBody), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<OAuthWindowResponseBody> RequestOAuthWindowURIAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<OAuthWindowResponseBody>> RequestOAuthWindowURIWithHttpInfoAsync(string memberGuid, string userGuid, string referralSource = default(string), string uiMessageWebviewUrlScheme = default(string), bool? skipAggregation = default(bool?), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<WidgetResponseBody> RequestWidgetURLAsync(string userGuid, WidgetRequestBody widgetRequestBody, string acceptLanguage = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<WidgetResponseBody>> RequestWidgetURLWithHttpInfoAsync(string userGuid, WidgetRequestBody widgetRequestBody, string acceptLanguage = default(string), System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> ResumeAggregationAsync(string memberGuid, string userGuid, MemberResumeRequestBody memberResumeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ResumeAggregationWithHttpInfoAsync(string memberGuid, string userGuid, MemberResumeRequestBody memberResumeRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> UpdateAccountByMemberAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateAccountByMemberWithHttpInfoAsync(string userGuid, string memberGuid, string accountGuid, AccountUpdateRequestBody accountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<CategoryResponseBody> UpdateCategoryAsync(string categoryGuid, string userGuid, CategoryUpdateRequestBody categoryUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<CategoryResponseBody>> UpdateCategoryWithHttpInfoAsync(string categoryGuid, string userGuid, CategoryUpdateRequestBody categoryUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<AccountResponseBody> UpdateManagedAccountAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<AccountResponseBody>> UpdateManagedAccountWithHttpInfoAsync(string memberGuid, string userGuid, string accountGuid, ManagedAccountUpdateRequestBody managedAccountUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> UpdateManagedMemberAsync(string memberGuid, string userGuid, ManagedMemberUpdateRequestBody managedMemberUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> UpdateManagedMemberWithHttpInfoAsync(string memberGuid, string userGuid, ManagedMemberUpdateRequestBody managedMemberUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> UpdateManagedTransactionAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> UpdateManagedTransactionWithHttpInfoAsync(string memberGuid, string userGuid, string transactionGuid, ManagedTransactionUpdateRequestBody managedTransactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> UpdateMemberAsync(string memberGuid, string userGuid, MemberUpdateRequestBody memberUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> UpdateMemberWithHttpInfoAsync(string memberGuid, string userGuid, MemberUpdateRequestBody memberUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TagResponseBody> UpdateTagAsync(string tagGuid, string userGuid, TagUpdateRequestBody tagUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TagResponseBody>> UpdateTagWithHttpInfoAsync(string tagGuid, string userGuid, TagUpdateRequestBody tagUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TaggingResponseBody> UpdateTaggingAsync(string taggingGuid, string userGuid, TaggingUpdateRequestBody taggingUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TaggingResponseBody>> UpdateTaggingWithHttpInfoAsync(string taggingGuid, string userGuid, TaggingUpdateRequestBody taggingUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionResponseBody> UpdateTransactionAsync(string transactionGuid, string userGuid, TransactionUpdateRequestBody transactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> UpdateTransactionWithHttpInfoAsync(string transactionGuid, string userGuid, TransactionUpdateRequestBody transactionUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<TransactionRuleResponseBody> UpdateTransactionRuleAsync(string transactionRuleGuid, string userGuid, TransactionRuleUpdateRequestBody transactionRuleUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<TransactionRuleResponseBody>> UpdateTransactionRuleWithHttpInfoAsync(string transactionRuleGuid, string userGuid, TransactionRuleUpdateRequestBody transactionRuleUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<UserResponseBody> UpdateUserAsync(string userGuid, UserUpdateRequestBody userUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> UpdateUserWithHttpInfoAsync(string userGuid, UserUpdateRequestBody userUpdateRequestBody, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<MemberResponseBody> VerifyMemberAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> VerifyMemberWithHttpInfoAsync(string memberGuid, string userGuid, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        #endregion Asynchronous Operations
+    }
